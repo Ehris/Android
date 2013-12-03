@@ -9,8 +9,68 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/tipTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignBaseline="@+id/billTextView"
+        android:layout_alignBottom="@+id/billTextView"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/billTextView"
+        android:text="@string/tip_text_view" />
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/bill_text_view" />
+
+    <EditText
+        android:id="@+id/tipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipTextView"
+        android:layout_alignBottom="@+id/tipTextView"
+        android:layout_toRightOf="@+id/tipTextView"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:text="@string/tip_edit_text" />
+
+    <TextView
+        android:id="@+id/finalBillTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billTextView"
+        android:layout_below="@+id/billEditText"
+        android:layout_marginTop="39dp"
+        android:text="@string/final_bill_text_view" />
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipTextView"
+        android:layout_alignBottom="@+id/tipTextView"
+        android:layout_toRightOf="@+id/billTextView"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_edit_text" />
+
+    <EditText
+        android:id="@+id/finalBillEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/finalBillTextView"
+        android:layout_alignBottom="@+id/finalBillTextView"
+        android:layout_centerHorizontal="true"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/final_bill_edit_text" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>
